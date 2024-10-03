@@ -3,6 +3,7 @@ import './App.css'
 import { Route, Routes, Link } from 'react-router-dom';
 import Dashboard from './pages/Dashboard';
 import PersonProfile from './pages/PersonProfile';
+import EditForm from './pages/PersonProfile/components/EditForm';
 
 export default function App() {
   const [hiredPeople, setHiredPeople] = useState([])
@@ -38,6 +39,7 @@ export default function App() {
         <Routes>
           <Route path="/" element={<Dashboard hiredPeople={hiredPeople} people={people} />} />
           <Route path="/view/:id" element={<PersonProfile people={people} isLoading ={isLoading} setHiredPeople={setHiredPeople} />} />
+          <Route path="/edit/:id" element={<EditForm hiredPeople={hiredPeople} setHiredPeople={setHiredPeople} />} />
         </Routes>
       </header>
     </>

@@ -18,8 +18,6 @@ function HireForm({ person, setHiredPeople }) {
     navigate('/')
   }
 
-  
-
   return (
     <form onSubmit={handleSubmit}>
       <label htmlFor="wage">Wage Offer</label>
